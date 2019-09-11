@@ -6,7 +6,7 @@
   http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-	<bean name="customerRepository"
+	<bean name="foo"
 		class="com.nishh.repository.HibernateCustomerRepositoryImpl" />
 
 	<bean name="customerService"
