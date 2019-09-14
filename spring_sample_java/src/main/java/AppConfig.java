@@ -11,13 +11,12 @@ public class AppConfig {
 
 	@Bean(name = "customerService")
 	public CustomerService getCustomerService() {
-		CustomerServiceImpl  customerServiceImpl= new CustomerServiceImpl();
-		customerServiceImpl.setCustomerRepository(getCustomerRepository());
+		CustomerServiceImpl customerServiceImpl = new CustomerServiceImpl(getCustomerRepository());
+		// customerServiceImpl.setCustomerRepository(getCustomerRepository());
 		return customerServiceImpl;
 	}
-	
-	
-	@Bean(name="customerRepository")
+
+	@Bean(name = "customerRepository")
 	public CustomerRepository getCustomerRepository() {
 		return new HibernateCustomerRepositoryImpl();
 	}
