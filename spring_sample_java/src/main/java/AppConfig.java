@@ -1,14 +1,14 @@
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.nishh.repository.CustomerRepository;
-import com.nishh.repository.HibernateCustomerRepositoryImpl;
+import com.nishh.service.CustomerService;
+import com.nishh.service.CustomerServiceImpl;
 
 @Configuration
 public class AppConfig {
 
-	@Bean(name="CustomerRepository")
-	public CustomerRepository getCustomerRepository() {
-		return new HibernateCustomerRepositoryImpl();
+	@Bean(name = "CustomerRepository")
+	public CustomerService getCustomerService() {
+		return new CustomerServiceImpl();
 	}
 }
