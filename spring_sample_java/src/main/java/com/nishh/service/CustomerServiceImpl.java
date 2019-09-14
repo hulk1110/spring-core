@@ -9,10 +9,8 @@ import com.nishh.repository.CustomerRepository;
 
 public class CustomerServiceImpl implements CustomerService {
 
-	@Autowired
 	private CustomerRepository customerRepository;
-	
-	
+
 	public CustomerServiceImpl() {
 	}
 
@@ -21,6 +19,7 @@ public class CustomerServiceImpl implements CustomerService {
 		this.customerRepository = customerRepository;
 	}
 
+	@Autowired
 	public void setCustomerRepository(CustomerRepository customerRepository) {
 		System.out.println("using setter injection");
 		this.customerRepository = customerRepository;
