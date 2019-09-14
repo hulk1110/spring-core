@@ -15,7 +15,7 @@ public class AppConfig {
 	public CustomerService getCustomerService() {
 		// CustomerServiceImpl customerServiceImpl = new CustomerServiceImpl(getCustomerRepository());
 		CustomerServiceImpl customerServiceImpl = new CustomerServiceImpl();
-		customerServiceImpl.setCustomerRepository(getCustomerRepository());
+		// customerServiceImpl.setCustomerRepository(getCustomerRepository());
 		return customerServiceImpl;
 	}
 

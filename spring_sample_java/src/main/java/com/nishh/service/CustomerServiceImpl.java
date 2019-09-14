@@ -2,12 +2,17 @@ package com.nishh.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.nishh.model.Customer;
 import com.nishh.repository.CustomerRepository;
 
 public class CustomerServiceImpl implements CustomerService {
 
+	@Autowired
 	private CustomerRepository customerRepository;
+	
+	
 	public CustomerServiceImpl() {
 	}
 
