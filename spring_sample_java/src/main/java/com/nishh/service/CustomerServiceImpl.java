@@ -11,7 +11,7 @@ import com.nishh.model.Customer;
 import com.nishh.repository.CustomerRepository;
 
 @Service("customerService")
-@Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
+@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class CustomerServiceImpl implements CustomerService {
 
 	private CustomerRepository customerRepository;
