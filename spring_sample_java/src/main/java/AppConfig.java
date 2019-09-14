@@ -3,6 +3,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.core.io.ClassPathResource;
 
 @Configuration
 @ComponentScan({"com.nishh"})
@@ -24,6 +25,9 @@ public class AppConfig {
 	 */
 	@Bean
 	public static PropertyPlaceholderConfigurer getPlaceholderConfigurer() {
-		return new PropertyPlaceholderConfigurer();
+		
+		PropertyPlaceholderConfigurer placeholderConfigurer= new PropertyPlaceholderConfigurer();
+		placeholderConfigurer.setLocations(new ClassPathResource("app.properties"));
+		return placeholderConfigurer;
 	}
 }
