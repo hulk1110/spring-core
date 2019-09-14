@@ -1,4 +1,5 @@
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 import com.nishh.repository.CustomerRepository;
@@ -7,6 +8,7 @@ import com.nishh.service.CustomerService;
 import com.nishh.service.CustomerServiceImpl;
 
 @Configuration
+@ComponentScan({"com.nishh"})
 public class AppConfig {
 
 	@Bean(name = "customerService")
