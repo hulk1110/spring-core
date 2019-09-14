@@ -10,7 +10,7 @@
 		class="com.nishh.repository.HibernateCustomerRepositoryImpl" />
 
 	<bean name="customerService"
-		class="com.nishh.service.CustomerServiceImpl" autowire="byType" scope="singleton">
+		class="com.nishh.service.CustomerServiceImpl" autowire="byType" scope="prototype">
 		<!-- <property name="customerRepository" ref="customerRepository"/> -->
 		<!-- <constructor-arg ref="customerRepository" index="0"/> -->
 	
