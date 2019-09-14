@@ -7,7 +7,7 @@ import com.nishh.service.CustomerServiceImpl;
 @Configuration
 public class AppConfig {
 
-	@Bean(name = "CustomerRepository")
+	@Bean(name = "CustomerService")
 	public CustomerService getCustomerService() {
 		return new CustomerServiceImpl();
 	}
