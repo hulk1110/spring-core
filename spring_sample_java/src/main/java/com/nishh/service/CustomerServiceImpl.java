@@ -8,6 +8,8 @@ import com.nishh.repository.CustomerRepository;
 public class CustomerServiceImpl implements CustomerService {
 
 	private CustomerRepository customerRepository;
+	public CustomerServiceImpl() {
+	}
 
 	public CustomerServiceImpl(CustomerRepository customerRepository) {
 		System.out.println("using construtor injection");
@@ -15,6 +17,7 @@ public class CustomerServiceImpl implements CustomerService {
 	}
 
 	public void setCustomerRepository(CustomerRepository customerRepository) {
+		System.out.println("using setter injection");
 		this.customerRepository = customerRepository;
 	}
 
